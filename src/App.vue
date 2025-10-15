@@ -1,30 +1,19 @@
 <template>
-  <h3>Todo List</h3>  
-  <ul>
-    <todo-item
-      v-for="x in items"
-      :key="x"
-      :item-name="x"
-      style="background-color: lightgreen;"
-    />
-  </ul>
-  <input v-model="newItem">
-  <button @click="addItem">Add</button>
+  <h1>App.vue</h1>
+  <p>The component has two div tags with one slot in each.</p>
+  <slot-comp>
+    <template v-slot:bottomSlot>
+      <h4>To the bottom slot!</h4>
+      <p>This p tag and the h4 tag above are directed to the bottom slot with the v-slot directive used on the template tag.</p>
+    </template>
+    <p>This goes into the default slot</p>
+  </slot-comp>
 </template>
 
-<script>
-  export default {
-    data() {
-      return {
-        newItem: '',
-        items: ['Buy apples','Make pizza','Mow the lawn']
-      };
-    },
-    methods: {
-      addItem() {
-        this.items.push(this.newItem),
-        this.newItem = '';
-      }
-    }
+<script></script>
+
+<style>
+  #app {
+    width: 300px;
   }
-</script>
+</style>   
