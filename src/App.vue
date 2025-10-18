@@ -1,19 +1,56 @@
 <template>
-  <h1>App.vue</h1>
-  <p>The component has two div tags with one slot in each.</p>
-  <slot-comp>
-    <template v-slot:bottomSlot>
-      <h4>To the bottom slot!</h4>
-      <p>This p tag and the h4 tag above are directed to the bottom slot with the v-slot directive used on the template tag.</p>
-    </template>
-    <p>This goes into the default slot</p>
-  </slot-comp>
+  <nav>
+      <navbar/>
+  </nav>
+  <main>
+    <RouterView></RouterView>
+  </main>
+  <footer>
+    <footer-bar/>
+  </footer>
+  
 </template>
 
 <script></script>
 
 <style>
-  #app {
-    width: 300px;
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    background-color: #F2D6A2;
+    padding: 20px;
+  }
+
+  h1 {
+    justify-self: center;
+    color: #261A0A;
+    font-size: 80px;
+  }
+
+  nav {
+    background-color: #8C5230;
+    justify-items: center;
+    border-bottom: 1px solid #261A0A;
+    position: sticky;
+    top: 0;
+  }
+
+  main {
+    background-color: #F2D6A2;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+  }
+
+  @media screen and (min-width: 1025px){
+
   }
 </style>   
