@@ -8,8 +8,7 @@
 </template>
 
 <script>
-import Navitem from './Navitem.vue';
-import NavItem from './Navitem.vue'
+import NavItem from './NavItem.vue'
 
 export default {
   components: { NavItem },

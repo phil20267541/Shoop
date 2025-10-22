@@ -1,8 +1,12 @@
 <template>
-  <li class="nav-item"
+  <li
+    class="nav-item"
+    :class="{ active: isActive }"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
-    @click="handleClick">
+    @click="handleClick"
+  >
+
     
     <router-link :to="item.link">
       {{ item.title }}
@@ -27,6 +31,22 @@ export default {
       isMobile: false
     };
   },
+  computed: {
+    isActive() {
+      // Current route path
+      const current = this.$route.path;
+
+      // Direct match with the main link
+      if (current === this.item.link) return true;
+
+      // If any subpage matches, also true
+      if (this.item.subpages) {
+        return this.item.subpages.some(sub => current === sub.link);
+      }
+
+      return false;
+    }
+  },
   mounted() {
     this.checkDevice();
     window.addEventListener("resize", this.checkDevice);
@@ -36,7 +56,6 @@ export default {
   },
   methods: {
     checkDevice() {
-      // Detect mobile layout dynamically (you can adjust the breakpoint)
       this.isMobile = window.innerWidth <= 768;
     },
     handleMouseEnter() {
@@ -47,13 +66,14 @@ export default {
     },
     handleClick(event) {
       if (this.isMobile && this.item.subpages) {
-        event.preventDefault(); // stop immediate route change
+        event.preventDefault();
         this.showDropdown = !this.showDropdown;
       }
     }
   }
 };
 </script>
+
 
 <style scoped>
 .nav-item {
@@ -67,6 +87,13 @@ export default {
   padding: 10px 16px;
   margin: 10px 16px;
   display: inline-block;
+}
+
+.nav-item.active > a {
+  border-radius: 20px;
+  background-color: #F2D6A2;
+  color: #261A0A;
+  border: 2px solid #261A0A;
 }
 
 .nav-item a:active {
