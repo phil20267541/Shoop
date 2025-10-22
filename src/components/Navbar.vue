@@ -1,28 +1,34 @@
 <template>
   <div class="navbar-container">
-    <img class="logo-image" src="../../public/favicon.ico" alt="Logo">
+    <router-link to="/Home"><img class="logo-image" src="../../public/favicon.ico" alt="Logo"></router-link>
     <ul class="navbar-bar">
-      <li v-for="page in pages" :key="page.title"><router-link :to="page.link">{{ page.title }}</router-link></li>
+      <NavItem v-for="page in pages" :key="page.title" :item="page" />
     </ul> 
   </div>
 </template>
 
 <script>
+import Navitem from './Navitem.vue';
+import NavItem from './Navitem.vue'
+
 export default {
+  components: { NavItem },
   data() {
     return {
       pages: [
-        {"title": "Home", "link": "/Home"},
-        {"title": "My Shoop", "link": "/ShoopPet"},
+        {"title": "My Shoop", "link": "/ShoopPet", "subpages": [
+          {"title": "My Shoop", "link": "/ShoopPet"},
+          {"title": "Stats", "link": "/ShoopStats"}
+        ]},
         {"title": "Shop", "link": "/Shop"},
-        {"title": "About", "link": "/About"}
+        {"title": "Adopt", "link": "/ShoopFarm"}
       ]
     };
   }
 };
 </script>
 
-<style>
+<style scoped>
 .navbar-container {
   width: 100vw;
   display: flex;
@@ -35,7 +41,6 @@ export default {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
   width: 40vw;
 }
 
@@ -45,26 +50,6 @@ export default {
   padding: 10px;
   position: absolute;
   left: 20px;
-}
-
-a {
-  color: #F2D6A2;
-  text-decoration: none;
-  padding: 10px 16px;
-  margin: 10px 16px;
-}
-
-a:active {
-  border-radius: 20px;
-  background-color: #8a5233;
-  color: #F2D6A2;
-}
-
-a.router-link-active {
-  border-radius: 20px;
-  background-color: #F2D6A2;
-  color: #261A0A;
-  border: 2px solid #261A0A;
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
    
