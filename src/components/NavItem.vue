@@ -33,18 +33,11 @@ export default {
   },
   computed: {
     isActive() {
-      // Current route path
       const current = this.$route.path;
-
-      // Direct match with the main link
-      if (current === this.item.link) return true;
-
-      // If any subpage matches, also true
-      if (this.item.subpages) {
-        return this.item.subpages.some(sub => current === sub.link);
-      }
-
-      return false;
+      
+      // If the current path is exactly the item's link (e.g. /Shop)
+      // OR starts with the item's path (e.g. /Shop/hats)
+      return current === this.item.link || current.startsWith(this.item.link + '/');
     }
   },
   mounted() {

@@ -15,12 +15,21 @@ export default {
   data() {
     return {
       pages: [
-        {"title": "My Shoop", "link": "/ShoopPet", "subpages": [
-          {"title": "My Shoop", "link": "/ShoopPet"},
-          {"title": "Stats", "link": "/ShoopStats"}
+        {title: "My Shoop", link: "/ShoopPet", subpages: [
+          {title: "My Shoop", link: "/ShoopPet"},
+          {title: "Stats", link: "/ShoopStats"}
         ]},
-        {"title": "Shop", "link": "/Shop"},
-        {"title": "Adopt", "link": "/ShoopFarm"}
+        {title: "Shop", link: "/Shop", subpages: [
+          {title: 'Shop', link: '/Shop'},
+          {title: 'Hats', link: '/Shop/hats'},
+          {title: 'Tops', link: '/Shop/tops'},
+          {title: 'Boots', link: '/Shop/boots'},
+          {title: 'Colors', link: '/Shop/colors'},
+          {title: 'Themes', link: '/Shop/themes'}
+        ]},
+        {title: "Adopt", link: "/ShoopFarm"},
+        {title: "Wiki", link: "/Wiki"}
+
       ]
     };
   }
