@@ -42,6 +42,12 @@
     background-color: #F2D6A2;
   }
 
+  footer {
+    background-color: #8C5230;
+    justify-items: center;
+    border-top: 1px solid #261A0A;
+  }
+
   @media screen and (min-width: 481px) and (max-width: 768px) {
     
   }
