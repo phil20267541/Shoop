@@ -4,6 +4,8 @@
     <ul class="navbar-bar">
       <NavItem v-for="page in pages" :key="page.title" :item="page" />
     </ul> 
+    <router-link v-if="!signed_in" to="/Login" class="login-button" @click="Login">Login</router-link>
+    <router-link v-else-if="signed_in" to="/Profile" class="profile-button" @click="Login">Profile</router-link>
   </div>
 </template>
 
@@ -29,9 +31,14 @@ export default {
         ]},
         {title: "Adopt", link: "/ShoopFarm"},
         {title: "Wiki", link: "/Wiki"}
-
-      ]
+      ],
+      signed_in: false
     };
+  },
+  methods: {
+    Login() {
+      this.signed_in = !this.signed_in
+    }
   }
 };
 </script>
@@ -59,6 +66,19 @@ export default {
   position: absolute;
   left: 20px;
 }
+
+.login-button, .profile-button {
+  position: absolute;
+  right: 20px;
+  align-self: center;
+  color: #261A0A;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid #261A0A;
+  border-radius: 20px;
+  background-color: #F2D6A2;
+}
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
    
 }

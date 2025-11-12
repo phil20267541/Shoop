@@ -26,10 +26,13 @@ export default {
 <style scoped>
 ul {
   list-style-type: none;
-  margin: 0 20px;
+  li {
+    margin-bottom: 3px;
+  }
   a {
     color: #F2D6A2;
     text-decoration: none;
+    font-size: 20px;
   }
   a:hover {
     text-decoration: underline;

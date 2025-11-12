@@ -15,6 +15,8 @@ import ShopBoots from '../views/Shop/ShopBoots.vue'
 import ShopColors from '../views/Shop/ShopColors.vue'
 import ShopThemes from '../views/Shop/ShopThemes.vue'
 import Wiki from '../views/Wiki/Wiki.vue'
+import Login from '../views/Login/Login.vue'
+import Profile from '../views/Profile/Profile.vue'
 
 const routes = [
   { path: '/', redirect: '/Home' },
@@ -26,6 +28,8 @@ const routes = [
   { path: '/ShoopPet', name: 'ShoopPet', component: ShoopPet },
   { path: '/ShoopStats', name: 'ShoopStats', component: ShoopStats },
   { path: '/Wiki', name: 'Wiki', component: Wiki },
+  { path: '/Login', name: 'Login', component: Login },
+  { path: '/Profile', name: 'Profile', component: Profile },
   
   {
     path: '/Shop',
