@@ -95,7 +95,7 @@ export default {
   color: #F2D6A2;
 }
 
-.nav-item a.router-link-active {
+.nav-item > a.router-link-active {
   border-radius: 20px;
   background-color: #F2D6A2;
   color: #261A0A;

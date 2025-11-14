@@ -60,7 +60,7 @@ export default {
 }
 
 .logo-image {
-  width: auto;
+  width: 40px;
   height: 40px;
   padding: 10px;
   position: absolute;

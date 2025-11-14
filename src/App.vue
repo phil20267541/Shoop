@@ -22,13 +22,14 @@
   header {
     background-color: #F2D6A2;
     padding: 20px;
+    h1 {
+      justify-self: center;
+      color: #261A0A;
+      font-size: 80px;
+    }
   }
 
-  h1 {
-    justify-self: center;
-    color: #261A0A;
-    font-size: 80px;
-  }
+
 
   nav {
     background-color: #8C5230;
@@ -40,6 +41,7 @@
 
   main {
     background-color: #F2D6A2;
+    padding: 20px;
   }
 
   footer {
