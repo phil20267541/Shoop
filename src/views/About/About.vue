@@ -63,6 +63,7 @@
 
 <style scoped>
 .paragraph{
+  border-bottom: 1px solid #261A0A;
   > h2 {
     margin: 20px 0;
     font-size: 40px;
