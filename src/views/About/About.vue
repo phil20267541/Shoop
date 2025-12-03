@@ -62,8 +62,10 @@
 <script></script>
 
 <style scoped>
-.paragraph{
+.paragraph {
   border-bottom: 1px solid #261A0A;
+  width: 80vw;
+  justify-self: center;
   > h2 {
     margin: 20px 0;
     font-size: 40px;
@@ -76,5 +78,8 @@
   > blockquote {
     font-size: 20px;
   }
+}
+.paragraph:last-of-type {
+  border: none;
 }
 </style>
