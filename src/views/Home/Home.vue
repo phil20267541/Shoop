@@ -20,7 +20,7 @@
 
 <script></script>
 
-<style>
+<style scoped>
 .content-box {
   display: flex;
   align-items: center;
@@ -43,7 +43,7 @@
   font-size: 30px;
   color: #F2D6A2;
   text-decoration: none;
-  
+  box-sizing: border-box;
 }
 
 .cta:hover {
