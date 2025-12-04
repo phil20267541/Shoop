@@ -7,11 +7,12 @@
       <h2>General Inquiries</h2>
       <form @submit.prevent="general">
         <h3>Name</h3>
-        <input type="text" mame="name" v-model="general_name" required></input>
+        <input type="text" name="name" v-model="general_name" required></input>
         <h3>Email</h3>
         <input type="email" name="email" v-model="general_email" required></input>
         <h3>Subject</h3>
         <select name="general_subject" v-model="general_subject" required>
+          <option value="" disabled>Please Select</option>
           <option v-for="item in general_select" value="item.value">{{ item.title }}</option>
         </select>
         <div v-if="general_subject == 'other'">
@@ -34,7 +35,6 @@ export default {
       general_name: '',
       general_email: '',
       general_select: [
-        {value: "", title: "Please Select"},
         {value: "content", title: "Content"},
         {value: "help", title: "Help"},
         {value: "1", title: "1"},
@@ -57,4 +57,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

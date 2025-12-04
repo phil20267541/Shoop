@@ -1,6 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/router.js'
+import './assets/css/main.css'
+import './assets/css/component.css'
+import './assets/css/layout.css'
+import './assets/css/sections.css'
+import './assets/css/utilities.css'
 
 // Optional global components
 import Navbar from './components/Navbar.vue'
