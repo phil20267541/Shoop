@@ -1,12 +1,12 @@
 /* resets, typography, variables */
 :root {
   --light-peach: #F2D6A2;
-  --light-peach-soft: ;
-  --light-peach-bold: ;
+  --light-peach-soft: #f4e0bc;
+  --light-peach-bold: #e5c791;
 
   --dutch-white: #F2DABD;
-  --dutch-white-soft: ;
-  --dutch-white-bold: ;
+  --dutch-white-soft: #fff0df;
+  --dutch-white-bold: #dcc2a4;
 
   --dark-brown: #261A0A;
   --dark-brown-soft: #3a2811;
@@ -25,40 +25,56 @@
 
   --white: #ffffff;
   --white-soft: #f2f2f2;
-}
-
-/* Light Colours */
-:root {
-  /* --color-background: var(--very-light-grey);
-  --color-text: var(--black);
-  --color-link: var(--dark-purple);
-  --color-link-hover: var(--dark-purple-soft)
-  --color-navbar: var(--dark-purple);
-  --color-navbar-text: var(--white);
-  --color-navbar-text-hover: var(--very-light-grey);
-  --color-footer: var(--dark-purple);
-  --color-footer-text: var(--white);
-  --color-footer-text-hover: var(--very-light-grey);
-  --color-beavers: var(--light-blue);
-  --color-cubs: var(--light-green);
-  --color-scouts: var(--green);
-  --color-squirrels: var(--red);
-
-  --section-gap: 20px;
-  --padding-main: 0 10px; */
+  
+  --page-background-color: var(--light-peach);
+  --navbar-background-color: var(--brown);
+  --footer-background-color: var(--brown);
+  --page-text-color: var(--black-soft);
+  --navbar-text-color: var(--light-peach);
+  --footer-text-color: var(--light-peach);
 }
 
 /* Dark Colours */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --color-background: var(--very-dark-grey);
-    --color-navbar: var(--light-purple);
-    --color-navbar-text: var(--black);
-    --color-navbar-text-hover: var(--very-dark-grey);
-    --color-footer: var(--light-purple);
-    --color-footer-text: var(--black);
-    --color-footer-text-hover: var(--very-dark-grey); */
+
   }
+}
+
+.jua-regular {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jua-light {
+  font-family: "Jua", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.jua-bold {
+  font-family: "Jua", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.jua-regular-italic {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.jua-light-italic {
+  font-family: "Jua", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.jua-bold-italic {
+  font-family: "Jua", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 *,
@@ -67,7 +83,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-weight: normal;
 }
 
 /* nav {
