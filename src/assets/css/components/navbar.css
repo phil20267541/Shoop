@@ -1,1 +1,92 @@
 /* buttons, cards, nav, footer */
+
+:root {
+  --navbar-width: 0;
+}
+
+.navbar-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar-bar-big {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: var(--navbar-width);
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  position: absolute;
+  left: 20px;
+}
+
+.login-button, .profile-button {
+  position: absolute;
+  right: 20px;
+  align-self: center;
+  color: #261A0A;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid #261A0A;
+  border-radius: 20px;
+  background-color: #F2D6A2;
+}
+/* Default is mobile */
+
+/* Small Tablet */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  :root {
+  }
+}
+
+/* Larger Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    --navbar-width: 40vw;
+  }
+
+  a:hover {
+    border-radius: 20px;
+    background-color: --navbar;
+    color: #F2D6A2;
+  }
+  
+  .navbar-bar-big {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: var(--navbar-width);
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1440px) {
+  :root {
+    --navbar-width: 40vw;
+  } 
+
+  a:hover {
+    border-radius: 20px;
+    background-color: --navbar;
+    color: #F2D6A2;
+  }
+
+  .navbar-bar-big {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: var(--navbar-width);
+  }
+}

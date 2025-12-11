@@ -68,7 +68,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped src="/src/assets/css/components/nav-item.css">
 .nav-item {
   position: relative;
   list-style: none;

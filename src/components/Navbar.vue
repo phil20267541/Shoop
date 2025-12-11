@@ -1,7 +1,7 @@
 <template>
   <div class="navbar-container">
     <router-link to="/Home"><img class="logo-image" src="../../public/favicon.ico" alt="Logo"></router-link>
-    <ul class="navbar-bar">
+    <ul class="navbar-bar-big">
       <NavItem v-for="page in pages" :key="page.title" :item="page" />
     </ul> 
     <router-link v-if="!signed_in" to="/Login" class="login-button" @click="Login">Login</router-link>
@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped src="/src/assets/css/components/navbar.css">
 .navbar-container {
   width: 100vw;
   display: flex;
