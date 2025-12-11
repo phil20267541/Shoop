@@ -69,30 +69,8 @@
   background-color: #a5623e;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-   .nav-item {
-    width: 100%;
-  }
-
-  .dropdown {
-    position: static; /* makes dropdown push content below */
-    box-shadow: none;
-    background-color: #A0623B;
-  }
-
-  .dropdown li {
-    border-top: 1px solid #7b4222;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-@media screen and (min-width: 1025px){
-  a:hover {
-    border-radius: 20px;
-    background-color: #a5623e;
-    color: #F2D6A2;
-  }
+a:hover {
+  border-radius: 20px;
+  background-color: #a5623e;
+  color: #F2D6A2;
 }

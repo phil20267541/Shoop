@@ -1,11 +1,17 @@
 <template>
   <div class="navbar-container">
     <router-link to="/Home"><img class="logo-image" src="../../public/favicon.ico" alt="Logo"></router-link>
-    <ul class="navbar-bar-big">
+    <ul class="navbar-bar">
       <NavItem v-for="page in pages" :key="page.title" :item="page" />
-    </ul> 
-    <router-link v-if="!signed_in" to="/Login" class="login-button" @click="Login">Login</router-link>
-    <router-link v-else-if="signed_in" to="/Profile" class="profile-button" @click="Login">Profile</router-link>
+    </ul>
+    <div class="menu-icon-container">
+      <img src="/menu-burger.png" class="menu-icon" @click="menuToggle">
+    </div>
+    <section class="menu-overlay" v-if="menuToggle">
+
+    </section>
+    <router-link v-if="!signedIn" to="/Login" class="login-button" @click="login">Login</router-link>
+    <router-link v-else-if="signedIn" to="/Profile" class="profile-button" @click="login">Profile</router-link>
   </div>
 </template>
 
@@ -32,13 +38,17 @@ export default {
         {title: "Adopt", link: "/ShoopFarm"},
         {title: "Wiki", link: "/Wiki"}
       ],
-      signed_in: false
+      signedIn: false,
+      menuToggle: false,
     };
   },
   methods: {
-    Login() {
-      this.signed_in = !this.signed_in
-    }
+    login() {
+      this.signedIn = !this.signedIn
+    },
+    menuToggle() {
+      this.menuToggle = !this.menuToggle
+    },
   }
 };
 </script>
